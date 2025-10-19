@@ -1,0 +1,311 @@
+/* === FUENTE === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* === BASE === */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  color: #333;
+}
+
+/* === ENCABEZADO === */
+header {
+  background: #ffffff;
+  color: #1e1e2f;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* === LOGO === */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-superior {
+  width: 60px;
+  height: auto;
+}
+
+/* === TÍTULO === */
+header h1 {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #ff9800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* === MENÚ === */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff9800;
+  transition: width 0.3s;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active {
+  color: #ff9800;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+/* === SECCIÓN PRINCIPAL === */
+.inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.bienvenida h2 {
+  color: #ff9800;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  max-width: 600px;
+  margin: 0 auto 25px;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* === BOTÓN PRINCIPAL === */
+.boton-principal {
+  background: #ff9800;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.boton-principal:hover {
+  background: #e67e00;
+  transform: scale(1.05);
+}
+
+/* === TARJETAS (Certificaciones / Ofertas) === */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #1e1e2f;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+/* === EQUIPO (Nosotros) === */
+.equipo {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.personas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 25px;
+}
+
+.persona {
+  background: white;
+  border-radius: 15px;
+  width: 280px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.persona:hover {
+  transform: translateY(-5px);
+}
+
+.foto {
+  width: 100%;
+  height: 220px;
+  background: #ddd url('default-avatar.png') center/cover no-repeat;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* === MAPA (Ubicación) === */
+.map-container {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffffff;
+  color: #555;
+  font-size: 0.9em;
+  border-top: 2px solid #ff9800;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer span {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+
+/* === ANIMACIONES FADE === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* === COLORES DESTACADOS === */
+h2 {
+  color: #ff9800;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.info p, .requisitos {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-size: 1.05em;
+}
+
+/* === BOTONES ACTIVOS === */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff9800;
+  transition: width 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* === TARJETAS (mejor estilo visual) === */
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 5px solid #ff9800;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  color: #ff9800;
+  font-size: 1.2em;
+}
+
+.card p {
+  color: #333;
+  font-size: 0.95em;
+}
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
